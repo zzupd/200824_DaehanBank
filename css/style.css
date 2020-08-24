@@ -1,0 +1,429 @@
+@charset "UTF-8";
+
+
+/* 공통사항 시작 */
+* {
+    color: #333;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+/* 공통사항 끝 */
+
+
+/* 가이드라인 시작 */
+/*
+#header {
+    border: 1px solid #000;
+}
+#header>#headerContents {
+    border: 1px solid #f00;
+}
+#header #headerLogo {
+    border: 1px solid #00f;
+}
+#header #gnb {
+    border: 1px solid #00f;
+}
+#header #gnb #mainMenu {
+    border: 1px solid #0f0;
+}
+*/
+
+/*
+
+#wrap {
+    border: 1px solid #000;
+}
+#wrap>#slideshow {
+    border: 1px solid #000;
+}
+*/
+/*
+
+#wrap>#main {
+    border: 1px solid #000;
+}
+#main>div {
+    border: 1px solid #000;
+}
+*/
+/*
+
+#footer {
+    border: 1px solid #000;
+}
+
+#footer #copyright {
+    border: 1px solid #000;
+}
+#footer #copyright div {
+    border: 1px solid #00f;
+}
+*/
+
+/* 가이드라인 끝 */
+
+
+
+/* header#header 시작 */
+header#header {
+    width: 100%;
+    height: 100px;
+
+    background-color: #0076BE;
+}
+
+#header>#headerContents {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+}
+
+#header #headerLogo {
+    width: 200px;
+    height: 40px;
+}
+
+
+
+#header nav#gnb {
+    width: 1000px;
+    height: 100px;
+
+}
+#header #gnb>ul#mainMenu {
+    width: 620px;
+    height: 40px;
+
+    margin-left: 380px;
+    margin-top: 30px;
+
+    position: relative;
+}
+#header #mainMenu>li {
+    width: 150px;
+
+
+    background-color: rgba(255, 255, 255, 0.7);
+    float: left;
+}
+#header #mainMenu>li:not(:first-child) {
+    border: none;
+}
+
+#header #mainMenu li:hover {
+    background-color: #E66B27;
+}
+#header #mainMenu li:hover>a {
+    color: #fff;
+}
+
+#header #mainMenu>li>a {
+    width: 150px;
+    height: 40px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 40px;
+
+    display: inline-block;
+}
+
+
+
+#header #mainMenu>li:first-child>ul {
+    border-left: 1px solid #0076BE;
+    border-right: none;
+}
+
+#header #mainMenu>li:last-child>ul {
+    border-right: 1px solid #0076BE;
+}
+
+
+#header #mainMenu>li:not(:first-child)>ul {
+    border-left: none;
+
+}
+
+
+#header #mainMenu .subMenu {
+    background-color: #fff;
+
+    border: none;
+    border-bottom: 1px solid #0076BE;
+
+    position: absolute;
+    transform: translateY(1px);
+
+    display: none;
+
+    z-index: 1;
+}
+
+#header #mainMenu .subMenu>li {
+    border: none;
+}
+#header #mainMenu .subMenu a {
+    width: 150px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    display: inline-block;
+}
+/* header#header 끝 */
+
+
+/* div#wrap 시작 */
+div#wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+
+#wrap>div#slideshow {
+    width: 1200px;
+    height: 300px;
+
+    overflow: hidden;
+
+    /*border: 4px solid #0f0;*/
+
+    position: relative;
+}
+#wrap>#slideshow>#slideFrame {
+    width: 3600px;
+    height: 300px;
+
+    /*border: 4px solid #f00;*/
+}
+#wrap>#slideshow a {
+    float: left;
+}
+
+#wrap>#slideshow div#slideshowMsg {
+    width: 370px;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+}
+
+#wrap>main#main {
+    height: 200px;
+
+    display: flex;
+}
+
+#main>div {
+    width: 400px;
+    height: 200px;
+
+    padding: 10px;
+
+}
+
+#main>#bbs>div {
+    position: relative;
+}
+
+#main>div#bbs button {
+    font-size: 18px;
+    padding: 4px 10px;
+    border: none;
+    outline: none;
+
+    float: left;
+}
+
+#main #tabBtn .tabBtnOn {
+    border: 1px solid #ccc;
+    border-bottom: none;
+}
+
+
+#main>div#bbs div#tabBtn {
+    padding-left: 30px;
+
+    z-index: 1;
+}
+#main>div#bbs div#tabBtn::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+#main>div#bbs>div:not(:first-child) {
+    width: 380px;
+    height: 140px;
+    border: 1px solid #ccc;
+
+    top: -1px;
+}
+
+
+/* div#bbsNotice 시작 */
+#main #bbsNotice table {
+    width: 380px;
+}
+#main #bbsNotice table a {
+    font-size: 14px;
+}
+#main #bbsNotice table tr:first-child {
+    cursor: pointer;
+}
+#main #bbsNotice table td:first-child {
+    width: 310px;
+    line-height: 40px;
+    padding-left: 10px;
+}
+/* div#bbsNotice 끝 */
+
+/* div#bbsGallery 시작 */
+#main #bbsGallery {
+    text-align: center;
+    padding-top: 15px;
+
+    display: none;
+}
+#main #bbsGallery a {
+    width: 110px;
+    height: 110px;
+    display: inline-block;
+}
+/* div#bbsGallery 끝 */
+
+
+#main div#banner {
+    text-align: center;
+}
+#main div#shortcut {
+    text-align: center;
+}
+
+/* div#wrap 끝 */
+
+
+/* footer#footer 시작 */
+footer#footer {
+    width: 100%;
+    height: 100px;
+
+    background-color: #0076BE;
+}
+#footer>#footerContents {
+    width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+}
+
+#footer #footerLogo {
+    width: 200px;
+    height: 40px;
+}
+
+
+
+#footer #copyright {
+    width: 1000px;
+    height: 100px;
+    padding-top: 10px;
+}
+
+
+#footer #copyright div {
+    line-height: 40px;
+    text-align: center;
+}
+
+/* footer#footer 끝 */
+
+
+
+/* div#layerPopupBg 레이어팝업 시작 */
+div#layerPopupBg {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(255, 255, 255, 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+    display: none;
+}
+#layerPopupBg>div#layerPopup {
+
+    width: 600px;
+    height: 350px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 40%;
+
+    transform: translate(-50%, -50%);
+}
+#layerPopupBg h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+#layerPopupBg p {
+    line-height: 28px;
+    margin-bottom: 40px;
+}
+#layerPopupBg li {
+    line-height: 24px;
+    list-style: disc;
+    list-style-position: inside;
+}
+#layerPopupBg div#closeBtn {
+    text-align: right;
+    padding-right: 20px;
+}
+#layerPopupBg div>button {
+    font-size: 20px;
+    padding: 4px 12px;
+}
+/* div#layerPopupBg 레이어팝업 끝 */
+
+
+/*  IE9 버전 이하 적용 */
+header, nav, main, section,
+aside, footer, address {
+    display: block;
+}
+/*  IE9 버전 이하 적용 */
+
+
